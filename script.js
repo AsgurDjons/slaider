@@ -33,20 +33,21 @@ window.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
+
     nav.addEventListener('click', (e) => {
         const target = e.target;
         if (target && target.classList.contains('next')) {
             hidenSlaider();
             ind--;
             if (ind < 0) {
-                ind = 4;
+                ind = slaiders.length -1;
             }
             slaiderShow(ind);
         } else {
             if (target && target.classList.contains('prev')) {
                 hidenSlaider();
                 ind++;
-                if (ind > 4) {
+                if (ind >= slaiders.length) {
                     ind = 0;
                 }
                 slaiderShow(ind);
