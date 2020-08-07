@@ -40,12 +40,13 @@
     border-radius: 100%;
     width: 30px;
     height: 30px;
+    cursor: pointer;
 }
 .open {
     background-color: red;
 }
 
-.claider_nav {
+.slaider_nav {
     width: 40%;
     position: absolute;
     top: 50%;
@@ -54,11 +55,14 @@
     justify-content: space-around;
     align-items: center;
 }
-.next img {
+
+.next {
+    display: block;
     width: 40px;
     cursor: pointer;
 }
-.prev img {
+.prev  {
+    display: block;
     width: 40px;
     cursor: pointer;
 }
