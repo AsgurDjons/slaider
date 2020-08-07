@@ -3,9 +3,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const slaiders = document.querySelectorAll('.slaider__iner'),
         items = document.querySelector('.slaider_items'),
         item = document.querySelectorAll('.slaider_item'),
-        nav = document.querySelector('.slaider_nav'),
-        next = document.querySelector('.next'),
-        prev = document.querySelector('.prev');
+        nav = document.querySelector('.slaider_nav');
 
     function slaiderShow(i = 0) {
         slaiders[i].classList.add('show');
