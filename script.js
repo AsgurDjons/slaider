@@ -4,6 +4,7 @@ window.addEventListener('DOMContentLoaded', () => {
         items = document.querySelector('.slaider_items'),
         item = document.querySelectorAll('.slaider_item'),
         nav = document.querySelector('.slaider_nav');
+        let ind = 0;
 
     function slaiderShow(i = 0) {
         slaiders[i].classList.add('show');
@@ -27,29 +28,28 @@ window.addEventListener('DOMContentLoaded', () => {
                 if (item == target) {
                     hidenSlaider();
                     slaiderShow(i);
+                    ind = i;
                 }
             });
         }
     });
-    
-    let i = 0;
     nav.addEventListener('click', (e) => {
         const target = e.target;
         if (target && target.classList.contains('next')) {
             hidenSlaider();
-            i--;
-            if (i < 0) {
-                i = 4;
+            ind--;
+            if (ind < 0) {
+                ind = 4;
             }
-            slaiderShow(i);
+            slaiderShow(ind);
         } else {
             if (target && target.classList.contains('prev')) {
                 hidenSlaider();
-                i++;
-                if (i > 4) {
-                    i = 0;
+                ind++;
+                if (ind > 4) {
+                    ind = 0;
                 }
-                slaiderShow(i);
+                slaiderShow(ind);
             }
         }
     });
