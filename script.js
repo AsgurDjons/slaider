@@ -36,23 +36,22 @@ window.addEventListener('DOMContentLoaded', () => {
     
     let i = 0;
     nav.addEventListener('click', (e) => {
-        hidenSlaider();
         const target = e.target;
         if (target && target.classList.contains('next')) {
             hidenSlaider();
-            slaiderShow(i);
             i--;
             if (i < 0) {
                 i = 4;
             }
+            slaiderShow(i);
         } else {
             if (target && target.classList.contains('prev')) {
                 hidenSlaider();
-                slaiderShow(i);
                 i++;
                 if (i > 4) {
                     i = 0;
                 }
+                slaiderShow(i);
             }
         }
     });
