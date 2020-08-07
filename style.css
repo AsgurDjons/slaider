@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.slaider__wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.slaider__iner {
+    display: none;
+    width: 400px;
+    height: 400px;
+}
+
+.show {
+    display: block;
+}
+
+.wrapper .slaider_items {
+    margin-top: 60px;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slaider_items .slaider_item {
+    border: 3px solid red;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+}
+.open {
+    background-color: red;
+}
