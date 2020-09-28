@@ -19,8 +19,10 @@ window.addEventListener('DOMContentLoaded', () => {
             item.classList.remove('open');
         });
     }
+    
     hidenSlaider();
     slaiderShow();
+
     items.addEventListener('click', (e) => {
         const target = e.target;
         if (target && target.classList.contains('slaider_item')) {
@@ -54,4 +56,32 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+
+    let p = [...document.querySelectorAll('.slaider_item')];
+    console.log(p);
 });
+
+// const num = [231,3242342,-666, 3425234534, 234,1,2,[423423423423,[42342342342342342]]];
+
+// console.log(Math.max(...num.flat(Infinity)));
+
+// const arr = [-50,12,10,-2,-1,-8, 10,2,3, -10];
+// let s =0;
+// function sum (arr) {
+//     // let int =0;
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] > 0) {
+//             s += arr[i];
+//             // s = int;
+//         }
+//     }
+//     return s ;
+// }
+// sum(arr);
+// console.log(s);
+// console.log(sum(arr));
+
+
+
+
+
